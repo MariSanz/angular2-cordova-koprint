@@ -1,0 +1,27 @@
+  
+  <img class="logo" src="/assets/images/KoPrint.png"/>
+
+  <form class="form-completa" novalidate #form="ngForm">
+
+    <h1>Iniciar Sesión</h1>
+    
+    <div class="mdl-textfield mdl-js-textfield">
+      <input class="mdl-textfield__input" type="text" id="user-email" [(ngModel)]="user.email" name="email"  required
+        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"/>
+      <label class="mdl-textfield__label" for="user-email">Tu e-mail...</label>
+    </div>
+   
+    <div class="mdl-textfield mdl-js-textfield">
+      <input class="mdl-textfield__input" type="password" id="user-clave" [(ngModel)]="user.clave" name="clave"/>
+      <label class="mdl-textfield__label" for="user-clave">Tu clave...</label>
+    </div>
+
+    <div class="btn-grande">
+      <input [disabled]="form.invalid" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" value="Enviar" (click)="login()">
+    </div>
+
+    <div>
+      <a routerLink="/register">Registrarse</a>
+    </div>
+
+  </form>

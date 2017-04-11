@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('../node_modules/material-design-lite/material.css');
+
+/** CABECERA **/
+
+.logo {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    font-size: 15pt;
+}
+
+/** FORMULARIOS **/
+
+.form-completa {
+    text-align: center;
+}
+
+.btn-grande .mdl-button {
+    width: 80%;
+    display: inline-block;
+}
+
+.demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+  padding-right: 0;
+}
+
+/** CONTENIDO **/
+
+body {
+    background-color: #75D8E4;
+}
+
+.mdl-layout__content {
+    display: block;
+}
