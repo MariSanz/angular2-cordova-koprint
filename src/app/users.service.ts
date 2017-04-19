@@ -14,7 +14,7 @@ export class UsersService {
   ) { }
 
   public register(user: User): Promise<any> {
-    return this.http.post(Settings.WS_URL + 'users', user)
+    return this.http.post(Settings.WS_URL + 'koprint/users', user)
       .toPromise();
   }
 
@@ -39,7 +39,7 @@ export class UsersService {
       })
     });
 
-    return this.http.post('http://localhost:3000/oauth/token',
+    return this.http.post(Settings.WS_URL + 'oauth/token',
       'grant_type=password&username=' + user.email + '&password=' + user.clave,
       options)
       .toPromise();

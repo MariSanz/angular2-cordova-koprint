@@ -7,8 +7,4 @@ describe('koprint App', () => {
     page = new KoprintPage();
   });
 
-  it('should display message saying app works', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
-  });
 });

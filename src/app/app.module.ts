@@ -10,17 +10,23 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
 import {UsersService} from './users.service';
+import { HomeComponent } from './home/home.component';
+import { GalleryPhotosComponent } from './gallery-photos/gallery-photos.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'gallery', component : GalleryPhotosComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent,
+    GalleryPhotosComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
