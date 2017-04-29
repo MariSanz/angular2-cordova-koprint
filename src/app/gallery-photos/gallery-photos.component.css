@@ -1,0 +1,12 @@
+.imagen {
+    width: 50%;
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.imagen img {
+    display: block;
+    width: 100%;
+}

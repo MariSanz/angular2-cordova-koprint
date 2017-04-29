@@ -10,13 +10,21 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private router:Router
-  ) { }
+  ) {
+    //var sdCard: DirectoryEntry = cordova.file.externalRootDirectory;
+    //sdCard.  
+
+    
+
+    
+  }
 
   ngOnInit() {
   }
 
+
   public createOrder(): void{
-     this.router.navigateByUrl('gallery');
+    this.router.navigateByUrl('gallery');
   }
 
 }

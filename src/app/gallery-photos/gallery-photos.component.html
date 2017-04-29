@@ -1,3 +1,5 @@
-<p>
-  gallery-photos works!
-</p>
+<h1>Galería</h1>
+
+<div *ngFor="let uriImagen of urisImagenes" class="imagen">
+  <img src="{{uriImagen}}"/>
+</div>

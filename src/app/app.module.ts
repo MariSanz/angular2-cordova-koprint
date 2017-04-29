@@ -12,6 +12,7 @@ import { RegisterComponent } from './register/register.component';
 import {UsersService} from './users.service';
 import { HomeComponent } from './home/home.component';
 import { GalleryPhotosComponent } from './gallery-photos/gallery-photos.component';
+import { ParametrosStore } from "app/almacen/parametros.store";
 
 const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
@@ -34,7 +35,10 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule
   ],
-  providers: [UsersService],
+  providers: [
+    UsersService,
+    ParametrosStore
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
