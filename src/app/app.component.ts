@@ -1,13 +1,15 @@
-import { Component, NgZone } from '@angular/core';
+import { Component, NgZone, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ParametrosStore } from "app/almacen/parametros.store";
+
+declare var componentHandler: any;
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   showLogin = false;
   
   public constructor(
@@ -16,6 +18,11 @@ export class AppComponent {
     private ngZone: NgZone
   ){
     document.addEventListener('deviceready', this.dispositivoIniciado.bind(this), false);
+  }
+
+  ngAfterViewInit() {
+    console.log('ngAfterViewInit');
+    componentHandler.upgradeDom();
   }
 
   private dispositivoIniciado(): void {

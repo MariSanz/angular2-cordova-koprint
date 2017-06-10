@@ -1,5 +1,13 @@
 <h1>Galería</h1>
 
-<div *ngFor="let uriImagen of urisImagenes" class="imagen">
-  <img src="{{uriImagen}}"/>
+<div *ngFor="let imagen of imagenes" class="imagen" (click)="seleccionar(imagen)">
+  <div class="marca">
+    <img [class.oculta]="!imagen.seleccionada" src="assets/images/check.png"/>
+    <img [class.oculta]="imagen.seleccionada" src="assets/images/uncheck.png"/>
+  </div>
+  <img class="foto" src="{{imagen.uri}}"/>
 </div>
+
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" (click)="irAFormularioDatos()">
+  <i class="material-icons">add</i>
+</button>

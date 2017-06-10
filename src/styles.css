@@ -33,6 +33,23 @@ body {
     background-color: #75D8E4;
 }
 
-.mdl-layout__content {
-    display: block;
+main {
+    padding-top: 60px;
+}
+
+/** Boton FAB **/
+
+.mdl-button--fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
+/** Barra superior (correccciones) **/
+
+.mdl-layout__obfuscator,
+header,
+.mdl-layout__drawer {
+    position: fixed;
 }

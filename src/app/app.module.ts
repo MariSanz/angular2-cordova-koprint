@@ -13,6 +13,7 @@ import {UsersService} from './users.service';
 import { HomeComponent } from './home/home.component';
 import { GalleryPhotosComponent } from './gallery-photos/gallery-photos.component';
 import { ParametrosStore } from "app/almacen/parametros.store";
+import { HeaderComponent } from './header/header.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    GalleryPhotosComponent
+    GalleryPhotosComponent,
+    HeaderComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -39,6 +41,9 @@ const appRoutes: Routes = [
     UsersService,
     ParametrosStore
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent,
+    HeaderComponent
+  ]
 })
 export class AppModule { }

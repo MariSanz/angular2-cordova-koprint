@@ -4,9 +4,21 @@
     margin: 0;
     padding: 0;
     float: left;
+    position: relative;
 }
 
-.imagen img {
+.imagen img.foto {
     display: block;
     width: 100%;
+}
+
+.oculta {
+    display: none;
+}
+
+.marca {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
 }
