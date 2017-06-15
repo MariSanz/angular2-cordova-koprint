@@ -1,4 +1,6 @@
 import { Component, OnInit, NgZone } from '@angular/core';
+import { PedidoStore } from "app/almacen/pedido.store";
+import { Router } from '@angular/router';
 
 declare var cordova:any;
 declare var window:any;
@@ -36,7 +38,9 @@ export class GalleryPhotosComponent implements OnInit {
   private imagenes: Imagen[] = [];
 
   constructor(
-      private ngZone: NgZone
+      private ngZone: NgZone,
+      private pedidoStore: PedidoStore,
+      private router:Router
   ) {
   }
 
@@ -64,7 +68,8 @@ export class GalleryPhotosComponent implements OnInit {
 
     Promise.all(seleccionadas)
         .then((dataURLs: string[]) => {
-            console.log(dataURLs);
+            this.pedidoStore.imagenes = dataURLs;
+            this.router.navigate(['/form-order']);
         })
         .catch((e) => {
             console.log(e);

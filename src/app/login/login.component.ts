@@ -44,6 +44,10 @@ export class LoginComponent implements OnInit {
       .catch(e => console.log(e));
   }
 
+  public irARegistro(): void {
+    this.router.navigate(['register']);
+  }
+
   ngOnInit() {
   }
 

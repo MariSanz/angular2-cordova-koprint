@@ -10,12 +10,10 @@ declare var componentHandler: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit {
-  showLogin = false;
-  
+
   public constructor(
-    private router: Router,
     private parametrosStore: ParametrosStore,
-    private ngZone: NgZone
+    private router: Router
   ){
     document.addEventListener('deviceready', this.dispositivoIniciado.bind(this), false);
   }
@@ -29,10 +27,10 @@ export class AppComponent implements AfterViewInit {
     this.parametrosStore.get('accessToken')
       .then(accessToken => {
         if (accessToken == null) {
-          this.router.navigate(['/login']);
+          this.router.navigate(['login'], {replaceUrl: true});
         }
         else {
-          this.router.navigate(['/home']);
+          this.router.navigate(['home'], {replaceUrl: true});
         }
       })
       .catch(err => console.error(err));

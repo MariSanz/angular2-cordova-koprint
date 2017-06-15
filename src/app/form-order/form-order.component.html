@@ -1,0 +1,28 @@
+  
+  <form class="form-completa" novalidate #form="ngForm">
+
+    <h1>Datos del cliente</h1>
+
+    <div>
+      <a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Seleccionar tienda</a>
+    </div>
+    
+    <div class="mdl-textfield mdl-js-textfield">
+      <input class="mdl-textfield__input" type="date" id="date" [(ngModel)]="date" name="date"  required />
+      <label class="mdl-textfield__label" for="user-email">Fecha de entrega...</label>
+    </div>
+   
+    <div class="mdl-textfield mdl-js-textfield">
+      <input class="mdl-textfield__input" type="text" id="name" [(ngModel)]="name" name="name"/>
+      <label class="mdl-textfield__label" for="name">¿Quien recoge el pedido?</label>
+    </div>
+
+    <div class="btn-grande">
+      <input [disabled]="form.invalid" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" value="Enviar">
+    </div>
+
+    <div>
+      <a routerLink="/register">Registrarse</a>
+    </div>
+
+  </form>

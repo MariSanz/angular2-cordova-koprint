@@ -14,12 +14,16 @@ import { HomeComponent } from './home/home.component';
 import { GalleryPhotosComponent } from './gallery-photos/gallery-photos.component';
 import { ParametrosStore } from "app/almacen/parametros.store";
 import { HeaderComponent } from './header/header.component';
+import { PedidoStore } from "app/almacen/pedido.store";
+import { FormOrderComponent } from "app/form-order/form-order.component";
+import { AcercadeComponent } from './acercade/acercade.component';
 
 const appRoutes: Routes = [
+  { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'gallery', component : GalleryPhotosComponent }
+  { path: 'gallery', component: GalleryPhotosComponent },
+  { path: 'form-order', component: FormOrderComponent },
+  { path: 'acercaDe', component: AcercadeComponent}
 ];
 
 @NgModule({
@@ -29,7 +33,9 @@ const appRoutes: Routes = [
     RegisterComponent,
     HomeComponent,
     GalleryPhotosComponent,
-    HeaderComponent
+    HeaderComponent,
+    FormOrderComponent,
+    AcercadeComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -39,7 +45,8 @@ const appRoutes: Routes = [
   ],
   providers: [
     UsersService,
-    ParametrosStore
+    ParametrosStore,
+    PedidoStore
   ],
   bootstrap: [
     AppComponent,

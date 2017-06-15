@@ -20,8 +20,10 @@
       <input [disabled]="form.invalid" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" value="Enviar" (click)="login()">
     </div>
 
-    <div>
-      <a routerLink="/register">Registrarse</a>
+    <div class="registrarse">
+      <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect" (click)="irARegistro()">
+        Registrarse
+      </button>
     </div>
 
   </form>
